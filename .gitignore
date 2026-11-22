@@ -1,0 +1,12 @@
+*.exe
+*.apk
+*.aar
+*.json
+*.aetherbak
+*.key
+*.pem
+*.b64
+*.db
+*.go
+*.sh
+*.ps1
