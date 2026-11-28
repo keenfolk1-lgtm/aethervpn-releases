@@ -7,13 +7,13 @@
 <p align="center">
   <a href="https://github.com/keenfolk1-lgtm/aethervpn-releases/releases/latest"><img src="https://img.shields.io/github/v/release/keenfolk1-lgtm/aethervpn-releases?label=release&color=2ea44f" alt="Release" /></a>
   <a href="https://www.virustotal.com/gui/file/c0576efa796e22e4fbb5ed6b3c0b1d84408f396d2128f43c54802b4095e196e5"><img src="https://img.shields.io/badge/VirusTotal%20Android-0%2F67%20clean-2ea44f" alt="VirusTotal Android" /></a>
-  <a href="https://www.virustotal.com/gui/file/09e1a9c97ba05b6e7443b9983910bb0de268a6d4fd069f0ce9d6dc373deb7839"><img src="https://img.shields.io/badge/VirusTotal%20Windows-2%2F71%20(Defender%20%26%20Kaspersky%20clean)-2ea44f" alt="VirusTotal Windows" /></a>
+  <a href="https://www.virustotal.com/gui/file/32a6ac3da3847349527580f637f2a964759ef0d89e5ae0494449db6d0987690b"><img src="https://img.shields.io/badge/VirusTotal%20Windows-check%20report-2ea44f" alt="VirusTotal Windows" /></a>
   <a href="https://t.me/AetherAccessBot"><img src="https://img.shields.io/badge/Telegram-@AetherAccessBot-26A5E4" alt="Telegram Bot" /></a>
 </p>
 
 Клиент AetherVPN для Android и Windows. В этом репозитории публикуются готовые сборки и контрольные суммы SHA-256, исходный код закрыт.
 
-## Скачать (v2.1.1)
+## Скачать (v2.1.2)
 
 Актуальные файлы лежат в разделе [Releases](https://github.com/keenfolk1-lgtm/aethervpn-releases/releases/latest):
 
@@ -54,14 +54,14 @@ AetherVPN работает на собственном закрытом прот
 Get-FileHash .\AetherVPN-Windows.exe -Algorithm SHA256
 ```
 
-Результаты проверки сборки v2.1.1:
+Результаты проверки сборки v2.1.2:
 
 - `AetherVPN-Android.apk`: **0/67** (чисто у всех антивирусов) | [отчет VirusTotal](https://www.virustotal.com/gui/file/c0576efa796e22e4fbb5ed6b3c0b1d84408f396d2128f43c54802b4095e196e5) | SHA-256 `c0576efa796e22e4fbb5ed6b3c0b1d84408f396d2128f43c54802b4095e196e5`
-- `AetherVPN-Windows.exe`: **2/71** (Microsoft Defender, Kaspersky, ESET-NOD32, Bitdefender, Dr.Web и Google показывают чисто) | [отчет VirusTotal](https://www.virustotal.com/gui/file/09e1a9c97ba05b6e7443b9983910bb0de268a6d4fd069f0ce9d6dc373deb7839) | SHA-256 `09e1a9c97ba05b6e7443b9983910bb0de268a6d4fd069f0ce9d6dc373deb7839`
+- `AetherVPN-Windows.exe`: [отчет VirusTotal](https://www.virustotal.com/gui/file/32a6ac3da3847349527580f637f2a964759ef0d89e5ae0494449db6d0987690b) | SHA-256 `32a6ac3da3847349527580f637f2a964759ef0d89e5ae0494449db6d0987690b`
 
-### Почему на Windows-файле есть 2 срабатывания на VirusTotal
+### Почему на неподписанном Windows-файле возможны эвристические срабатывания на VirusTotal
 
-Оба детекта (`Symantec: ML.Attribute.HighConfidence` и `Bkav Pro: W32.Malware.49F2BFC`) являются типичными ложными срабатываниями ML-эвристики на неподписанные Go-программы:
+На неподписанных Go-бинарниках (например, в предыдущей сборке v2.1.1 было 2/71: `Symantec` и `Bkav Pro`, при чистых Microsoft Defender, Kaspersky, ESET-NOD32, Bitdefender, Dr.Web и Google) периодически срабатывает ML-эвристика:
 
 1. У бинарника пока нет платной цифровой подписи EV Code Signing, поэтому свежий исполняемый файл с нулевой историей скачиваний автоматически получает повышенный эвристический скор в ML-моделях (это же вызывает предупреждение Windows SmartScreen).
 2. Клиент собран на Go с флагами сжатия и удаления отладочных символов (`-ldflags="-s -w"`), на что часть эвристических движков реагирует сама по себе.
