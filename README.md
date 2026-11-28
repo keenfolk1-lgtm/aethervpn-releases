@@ -6,14 +6,14 @@
 
 <p align="center">
   <a href="https://github.com/keenfolk1-lgtm/aethervpn-releases/releases/latest"><img src="https://img.shields.io/github/v/release/keenfolk1-lgtm/aethervpn-releases?label=release&color=2ea44f" alt="Release" /></a>
-  <a href="https://www.virustotal.com/gui/file/c0576efa796e22e4fbb5ed6b3c0b1d84408f396d2128f43c54802b4095e196e5"><img src="https://img.shields.io/badge/VirusTotal%20Android-0%2F67%20clean-2ea44f" alt="VirusTotal Android" /></a>
-  <a href="https://www.virustotal.com/gui/file/32a6ac3da3847349527580f637f2a964759ef0d89e5ae0494449db6d0987690b"><img src="https://img.shields.io/badge/VirusTotal%20Windows-check%20report-2ea44f" alt="VirusTotal Windows" /></a>
+  <a href="https://www.virustotal.com/gui/file/3110767b48156595574f535a2869f17b9057f2fce75d78c31e80259252cebed5"><img src="https://img.shields.io/badge/VirusTotal%20Android-check%20report-2ea44f" alt="VirusTotal Android" /></a>
+  <a href="https://www.virustotal.com/gui/file/0410789bd40ec20c5cca9249880a5f517d5487d5234ef28374810b55dc1c3ba2"><img src="https://img.shields.io/badge/VirusTotal%20Windows-check%20report-2ea44f" alt="VirusTotal Windows" /></a>
   <a href="https://t.me/AetherAccessBot"><img src="https://img.shields.io/badge/Telegram-@AetherAccessBot-26A5E4" alt="Telegram Bot" /></a>
 </p>
 
 Клиент AetherVPN для Android и Windows. В этом репозитории публикуются готовые сборки и контрольные суммы SHA-256, исходный код закрыт.
 
-## Скачать (v2.1.2)
+## Скачать (v2.1.3)
 
 Актуальные файлы лежат в разделе [Releases](https://github.com/keenfolk1-lgtm/aethervpn-releases/releases/latest):
 
@@ -54,10 +54,10 @@ AetherVPN работает на собственном закрытом прот
 Get-FileHash .\AetherVPN-Windows.exe -Algorithm SHA256
 ```
 
-Результаты проверки сборки v2.1.2:
+Результаты проверки сборки v2.1.3:
 
-- `AetherVPN-Android.apk`: **0/67** (чисто у всех антивирусов) | [отчет VirusTotal](https://www.virustotal.com/gui/file/c0576efa796e22e4fbb5ed6b3c0b1d84408f396d2128f43c54802b4095e196e5) | SHA-256 `c0576efa796e22e4fbb5ed6b3c0b1d84408f396d2128f43c54802b4095e196e5`
-- `AetherVPN-Windows.exe`: [отчет VirusTotal](https://www.virustotal.com/gui/file/32a6ac3da3847349527580f637f2a964759ef0d89e5ae0494449db6d0987690b) | SHA-256 `32a6ac3da3847349527580f637f2a964759ef0d89e5ae0494449db6d0987690b`
+- `AetherVPN-Android.apk`: [отчет VirusTotal](https://www.virustotal.com/gui/file/3110767b48156595574f535a2869f17b9057f2fce75d78c31e80259252cebed5) | SHA-256 `3110767b48156595574f535a2869f17b9057f2fce75d78c31e80259252cebed5`
+- `AetherVPN-Windows.exe`: [отчет VirusTotal](https://www.virustotal.com/gui/file/0410789bd40ec20c5cca9249880a5f517d5487d5234ef28374810b55dc1c3ba2) | SHA-256 `0410789bd40ec20c5cca9249880a5f517d5487d5234ef28374810b55dc1c3ba2`
 
 ### Почему на неподписанном Windows-файле возможны эвристические срабатывания на VirusTotal
 
